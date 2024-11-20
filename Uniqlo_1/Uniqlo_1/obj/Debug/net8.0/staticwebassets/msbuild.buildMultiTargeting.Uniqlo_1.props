@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Uniqlo_1.props" />
+</Project>
