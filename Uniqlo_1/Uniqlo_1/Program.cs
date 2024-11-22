@@ -1,3 +1,6 @@
+using Microsoft.EntityFrameworkCore;
+using Uniqlo_1.DataAccess;
+
 namespace Uniqlo_1
 {
     public class Program
@@ -8,6 +11,11 @@ namespace Uniqlo_1
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
+            builder.Services.AddDbContext<UniqloDbContext>(opt =>
+            {
+                opt.UseSqlServer(builder.Configuration.GetConnectionString("MSSql"));
+            });
+
 
             var app = builder.Build();
 
@@ -22,11 +30,16 @@ namespace Uniqlo_1
 
             //app.UseAuthorization();
 
+
+            app.MapControllerRoute(
+                name: "area",
+                pattern: "{area:exists}/{controller=Dashboard}/{action=Index}/{id?}");
             app.MapControllerRoute(
                 name: "default",
                 pattern: "{controller=Home}/{action=Index}/{id?}");
 
             app.Run();
+
         }
     }
 }
