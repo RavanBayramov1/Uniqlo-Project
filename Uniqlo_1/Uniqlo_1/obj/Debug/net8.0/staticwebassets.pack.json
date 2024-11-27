@@ -9,6 +9,10 @@
       "PackagePath": "staticwebassets\\admin\\css\\sb-admin-2.min.css"
     },
     {
+      "Id": "C:\\Users\\99450\\Desktop\\Uniqlo-Project\\Uniqlo_1\\Uniqlo_1\\wwwroot\\admin\\img\\ravan_bayramov.jpg",
+      "PackagePath": "staticwebassets\\admin\\img\\ravan_bayramov.jpg"
+    },
+    {
       "Id": "C:\\Users\\99450\\Desktop\\Uniqlo-Project\\Uniqlo_1\\Uniqlo_1\\wwwroot\\admin\\img\\undraw_posting_photo.svg",
       "PackagePath": "staticwebassets\\admin\\img\\undraw_posting_photo.svg"
     },
@@ -7825,12 +7829,28 @@
       "PackagePath": "staticwebassets\\assets\\style.css"
     },
     {
+      "Id": "C:\\Users\\99450\\Desktop\\Uniqlo-Project\\Uniqlo_1\\Uniqlo_1\\wwwroot\\imgs\\sliders\\241mo425.w41.jpg",
+      "PackagePath": "staticwebassets\\imgs\\sliders\\241mo425.w41.jpg"
+    },
+    {
       "Id": "C:\\Users\\99450\\Desktop\\Uniqlo-Project\\Uniqlo_1\\Uniqlo_1\\wwwroot\\imgs\\sliders\\4ls0pjkv.m1m.jpg",
       "PackagePath": "staticwebassets\\imgs\\sliders\\4ls0pjkv.m1m.jpg"
     },
     {
-      "Id": "C:\\Users\\99450\\Desktop\\Uniqlo-Project\\Uniqlo_1\\Uniqlo_1\\wwwroot\\imgs\\sliders\\5dpbjon2.0tl.jpg",
-      "PackagePath": "staticwebassets\\imgs\\sliders\\5dpbjon2.0tl.jpg"
+      "Id": "C:\\Users\\99450\\Desktop\\Uniqlo-Project\\Uniqlo_1\\Uniqlo_1\\wwwroot\\imgs\\sliders\\4pvnqli4.fkn.jpg",
+      "PackagePath": "staticwebassets\\imgs\\sliders\\4pvnqli4.fkn.jpg"
+    },
+    {
+      "Id": "C:\\Users\\99450\\Desktop\\Uniqlo-Project\\Uniqlo_1\\Uniqlo_1\\wwwroot\\imgs\\sliders\\dl35hogl.tja.jpg",
+      "PackagePath": "staticwebassets\\imgs\\sliders\\dl35hogl.tja.jpg"
+    },
+    {
+      "Id": "C:\\Users\\99450\\Desktop\\Uniqlo-Project\\Uniqlo_1\\Uniqlo_1\\wwwroot\\imgs\\sliders\\ockou5jk.xxu.jpg",
+      "PackagePath": "staticwebassets\\imgs\\sliders\\ockou5jk.xxu.jpg"
+    },
+    {
+      "Id": "C:\\Users\\99450\\Desktop\\Uniqlo-Project\\Uniqlo_1\\Uniqlo_1\\wwwroot\\imgs\\sliders\\vev5yddg.qwg.jpg",
+      "PackagePath": "staticwebassets\\imgs\\sliders\\vev5yddg.qwg.jpg"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.Uniqlo_1.Microsoft.AspNetCore.StaticWebAssets.props",

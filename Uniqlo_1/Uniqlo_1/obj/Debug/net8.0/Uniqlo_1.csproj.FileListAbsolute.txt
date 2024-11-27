@@ -995,3 +995,4 @@ C:\Users\99450\Desktop\Uniqlo-Project2\Uniqlo_1\Uniqlo_1\obj\Debug\net8.0\scoped
 C:\Users\99450\Desktop\Uniqlo-Project2\Uniqlo_1\Uniqlo_1\obj\Debug\net8.0\Uniqlo_1.csproj.Up2Date
 C:\Users\99450\Desktop\Uniqlo-Project2\Uniqlo_1\Uniqlo_1\obj\Debug\net8.0\Uniqlo_1.genruntimeconfig.cache
 C:\Users\99450\Desktop\Uniqlo-Project2\Uniqlo_1\Uniqlo_1\obj\Debug\net8.0\ref\Uniqlo_1.dll
+C:\Users\99450\Desktop\Uniqlo-Project\Uniqlo_1\Uniqlo_1\obj\Debug\net8.0\Uniqlo_1.sourcelink.json
