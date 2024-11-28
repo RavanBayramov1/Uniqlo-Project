@@ -5,11 +5,10 @@
 
 <div class="card shadow mb-4">
     <div class="card-header py-3">
-        <h6 class="m-0 font-weight-bold text-primary">Product Create</h6>
+        <h6 class="m-0 font-weight-bold text-primary">Product create</h6>
     </div>
     <div class="card-body">
         <form enctype="multipart/form-data" method="post">
-
             <div class="form-group">
                 <label asp-for="Name"></label>
                 <input class="form-control" asp-for="Name">
@@ -21,34 +20,38 @@
                 <span class="text-danger" asp-validation-for="Description"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Quantity"></label>
-                <input class="form-control" asp-for="Quantity">
-                <span class="text-danger" asp-validation-for="Quantity"></span>
-            </div>
-            <div class="form-group">
                 <label asp-for="File"></label>
                 <input class="form-control" asp-for="File">
                 <span class="text-danger" asp-validation-for="File"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="CostPrice"></label>
-                <input class="form-control" asp-for="CostPrice">
-                <span class="text-danger" asp-validation-for="CostPrice"></span>
+            <div class="form-row">
+                <div class="col">
+                    <label asp-for="CostPrice"></label>
+                    <input class="form-control" asp-for="CostPrice">
+                    <span class="text-danger" asp-validation-for="CostPrice"></span>
+                </div>
+                <div class="col">
+                    <label asp-for="SellPrice"></label>
+                    <input class="form-control" asp-for="SellPrice">
+                    <span class="text-danger" asp-validation-for="SellPrice"></span>
+                </div>
+                <div class="col">
+                    <label asp-for="Discount"></label>
+                    <input class="form-control" asp-for="Discount">
+                    <span class="text-danger" asp-validation-for="Discount"></span>
+                </div>
             </div>
-            <div class="form-group">
-                <label asp-for="SellPrice"></label>
-                <input class="form-control" asp-for="SellPrice">
-                <span class="text-danger" asp-validation-for="SellPrice"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Discount"></label>
-                <input class="form-control" asp-for="Discount">
-                <span class="text-danger" asp-validation-for="Discount"></span>
-            </div>
-            <div class="form-group">
+            <div class="form-row">
+                <div class="col">
+                    <label asp-for="Quantity"></label>
+                    <input class="form-control" asp-for="Quantity">
+                    <span class="text-danger" asp-validation-for="Quantity"></span>
+                </div>
+                <div class="col">
                 <label asp-for="BrandId"></label>
                 <input class="form-control" asp-for="BrandId">
                 <span class="text-danger" asp-validation-for="BrandId"></span>
+                </div>
             </div>
             <button type="submit" class="btn btn-primary my-2">Submit</button>
         </form>

@@ -88,13 +88,17 @@ namespace Uniqlo_1.Areas.Admin.Controllers
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
-        public async Task<IActionResult> Delete(int id, SliderCreateVM vm)
+        public async Task<IActionResult> Delete(int id)
         {
-            Slider slider = await _context.Sliders.Where(x => x.Id == id).FirstOrDefaultAsync();
-            if (slider == null) ModelState.AddModelError("File", "File not found!");
-            _context.Sliders.Remove(slider);
+            var data = await _context.Sliders.Where(x => x.Id == id).FirstOrDefaultAsync();
+            if (data == null) return NotFound();
+            _context.Sliders.Remove(data);
             _context.SaveChanges();
-            System.IO.File.Delete(Path.Combine(_env.WebRootPath, "imgs", "sliders", vm.File.FileName));
+            string filePath = Path.Combine(_env.WebRootPath, "imgs", "sliders", data.ImageUrl);
+            if (Path.Exists(filePath))
+            {
+                System.IO.File.Delete(filePath);
+            }
             return RedirectToAction(nameof(Index));
         }
         public  async Task<IActionResult> Hide(int id)
