@@ -1259,3 +1259,8 @@ C:\Users\99450\Desktop\Uniqlo-Project\Uniqlo_1\Uniqlo_1\bin\Debug\net8.0\Microso
 C:\Users\99450\Desktop\Uniqlo-Project\Uniqlo_1\Uniqlo_1\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
 C:\Users\99450\Desktop\Uniqlo-Project\Uniqlo_1\Uniqlo_1\bin\Debug\net8.0\Microsoft.Extensions.Identity.Core.dll
 C:\Users\99450\Desktop\Uniqlo-Project\Uniqlo_1\Uniqlo_1\bin\Debug\net8.0\Microsoft.Extensions.Identity.Stores.dll
+C:\Users\I Novbe\Desktop\Uniqlo-Project\Uniqlo_1\Uniqlo_1\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\I Novbe\Desktop\Uniqlo-Project\Uniqlo_1\Uniqlo_1\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Users\I Novbe\Desktop\Uniqlo-Project\Uniqlo_1\Uniqlo_1\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\I Novbe\Desktop\Uniqlo-Project\Uniqlo_1\Uniqlo_1\bin\Debug\net8.0\Microsoft.Extensions.Identity.Core.dll
+C:\Users\I Novbe\Desktop\Uniqlo-Project\Uniqlo_1\Uniqlo_1\bin\Debug\net8.0\Microsoft.Extensions.Identity.Stores.dll

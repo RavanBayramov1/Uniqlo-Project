@@ -7770,19 +7770,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\99450\\.nuget\\packages\\": {}
+    "C:\\Users\\I Novbe\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\99450\\Desktop\\Uniqlo-Project\\Uniqlo_1\\Uniqlo_1\\Uniqlo_1.csproj",
+      "projectUniqueName": "C:\\Users\\I Novbe\\Desktop\\Uniqlo-Project\\Uniqlo_1\\Uniqlo_1\\Uniqlo_1.csproj",
       "projectName": "Uniqlo_1",
-      "projectPath": "C:\\Users\\99450\\Desktop\\Uniqlo-Project\\Uniqlo_1\\Uniqlo_1\\Uniqlo_1.csproj",
-      "packagesPath": "C:\\Users\\99450\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\99450\\Desktop\\Uniqlo-Project\\Uniqlo_1\\Uniqlo_1\\obj\\",
+      "projectPath": "C:\\Users\\I Novbe\\Desktop\\Uniqlo-Project\\Uniqlo_1\\Uniqlo_1\\Uniqlo_1.csproj",
+      "packagesPath": "C:\\Users\\I Novbe\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\I Novbe\\Desktop\\Uniqlo-Project\\Uniqlo_1\\Uniqlo_1\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\99450\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\I Novbe\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
