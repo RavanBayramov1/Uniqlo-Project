@@ -13,14 +13,14 @@ namespace Uniqlo_1.Controllers
         public async Task<IActionResult> Index()
         {
             HomeVM vm = new();
-            vm.Sliders = await _context.Sliders.Select(x => new SliderListItemVM
+            vm.Sliders = await _context.Sliders.Where(x=> !x.IsDeleted).Select(x => new SliderListItemVM
             {
                 ImageUrl = x.ImageUrl,
                 Link = x.Link!,
                 Subtitle = x.Subtitle,
                 Title = x.Title
             }).ToListAsync();
-            vm.Products = await _context.Products.Select(x => new ProductListItemVM
+            vm.Products = await _context.Products.Where(x => !x.IsDeleted).Select(x => new ProductListItemVM
             {
                 CoverImage = x.CoverImage,
                 Discount = x.Discount,

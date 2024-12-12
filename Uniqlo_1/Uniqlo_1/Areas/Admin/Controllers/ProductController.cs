@@ -109,7 +109,7 @@ namespace Uniqlo_1.Areas.Admin.Controllers
 					ModelState.AddModelError("File", "File size must be less than 400kb!");
 				}
 			}
-			if (vm.OtherFiles.Any())
+			if (vm.OtherFiles?.Any() ?? false)
 			{
 				if (!vm.OtherFiles.All(x => x.IsValidType("image")))
 				{
@@ -133,6 +133,14 @@ namespace Uniqlo_1.Areas.Admin.Controllers
 				ModelState.AddModelError("BrandId", "Brand not found!");
 				return View();
 			}
+			var update = await _context.Products.FindAsync(id);
+			update.BrandId = vm.BrandId;	
+			update.Name = vm.Name;
+			update.Description = vm.Description;
+			update.Quantity = vm.Quantity;
+			update.Discount = vm.Discount;
+			update.CostPrice = vm.CostPrice;
+			update.SellPrice = vm.SellPrice;
 			var data = await _context.Products.Include(x => x.Images)
 			   .Where(x => x.Id == id)
 			   .FirstOrDefaultAsync();
@@ -140,9 +148,11 @@ namespace Uniqlo_1.Areas.Admin.Controllers
 			{
 				ImageUrl = x.UploadAsync(_env.WebRootPath, "imgs", "products").Result
 			}).ToList());
-			await _context.SaveChangesAsync();
+            await _context.SaveChangesAsync();
 			return RedirectToAction(nameof(Index));
 		}
+    
+					
 
 		public async Task<IActionResult> Delete(int? id)
 		{
@@ -179,5 +189,21 @@ namespace Uniqlo_1.Areas.Admin.Controllers
 			return RedirectToAction(nameof(Update), new { id });
 
 		}
-	}
+        public async Task<IActionResult> Hide(int id)
+        {
+            _context.Products
+            .Where(x => x.Id == id)
+            .FirstOrDefault().IsDeleted = true;
+            _context.SaveChanges();
+            return RedirectToAction(nameof(Index));
+        }
+        public async Task<IActionResult> Show(int id)
+        {
+            _context.Products
+            .Where(x => x.Id == id)
+            .FirstOrDefault().IsDeleted = false;
+            _context.SaveChanges();
+            return RedirectToAction(nameof(Index));
+        }
+    }
 }

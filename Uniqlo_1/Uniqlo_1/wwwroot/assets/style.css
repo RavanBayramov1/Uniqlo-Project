@@ -1021,8 +1021,12 @@ h3.widget-title-modal {
   11. Popular Product Area
 --------------------------------*/
 
+.product__details : hover{
+    color : white !important;
+} 
+
 .product__details span.popular__pro__prize {
-    color: #9c9b9b;
+    color: white !important;
     display: inline-block;
     font-size: 16px;
     margin-top: 11px;

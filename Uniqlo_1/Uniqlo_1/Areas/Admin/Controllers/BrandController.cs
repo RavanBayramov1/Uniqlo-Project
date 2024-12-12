@@ -29,11 +29,21 @@ public class BrandController(UniqloDbContext _context):Controller
         await _context.SaveChangesAsync();
         return RedirectToAction(nameof(Index));
     }
-    public async Task<IActionResult> Delete(int id)
+    public async Task<IActionResult> Delete(int? id)
     {
-        var data = await _context.Brands.Where(x=> x.Id == id).FirstOrDefaultAsync();
-        if(data is null) return NotFound();
-        _context.Brands.Remove(data);
+        if (id is null) return NotFound();
+        //var data = await _context.Products.Where(x=> x.BrandId == id).FirstOrDefaultAsync();
+        //data.BrandId = null;
+
+        if ( await _context.Brands.AnyAsync(x=> x.Id == id))
+        {
+            _context.Brands.Remove(new Brand
+            {
+                Id = id.Value
+            });
+            await _context.SaveChangesAsync();
+        }
+        
         _context.SaveChanges();
         return RedirectToAction(nameof(Index));
     }
