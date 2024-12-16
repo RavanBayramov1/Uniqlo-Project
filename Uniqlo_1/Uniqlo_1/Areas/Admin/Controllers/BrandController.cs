@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using Uniqlo_1.DataAccess;
 using Uniqlo_1.Models;
 using Uniqlo_1.ViewModels.Brands;
+using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
 
 namespace Uniqlo_1.Areas.Admin.Controllers;
 
@@ -26,6 +27,25 @@ public class BrandController(UniqloDbContext _context):Controller
             Name = vm.Name
         };
         await _context.Brands.AddAsync(brand);
+        await _context.SaveChangesAsync();
+        return RedirectToAction(nameof(Index));
+    }
+    public async Task<IActionResult> Update(int? id)
+    {
+        if (id is null) return BadRequest();
+        var data = await _context.Brands.Where(x => x.Id == id).Select(x=> new BrandUpdateVM
+        {
+            Name=x.Name
+        }).FirstOrDefaultAsync();
+        if(data is null) return NotFound();
+        return View(data);
+    }
+    [HttpPost]
+    public async Task<IActionResult> Update(int? id, BrandUpdateVM vm)
+    {
+        if(id is null) return BadRequest();
+        var data = await _context.Brands.FindAsync(id);
+        data.Name = vm.Name;
         await _context.SaveChangesAsync();
         return RedirectToAction(nameof(Index));
     }

@@ -1,4 +1,4 @@
-﻿
+﻿@model List<Brand>
 @{
     ViewData["Title"] = "Index";
 }
@@ -23,6 +23,7 @@
                         <tr>
                             <td>@item.Name</td>
                             <td><a class="btn btn-danger" asp-controller="Brand" asp-action="Delete" asp-route-id="@item.Id">Sil</a></td>
+                            <td><a class="btn btn-success" asp-controller="Brand" asp-action="Update" asp-route-id="@item.Id">Dəyiş</a></td>
                         </tr>
                     }
                 </tbody>

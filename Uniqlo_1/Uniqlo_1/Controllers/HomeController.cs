@@ -20,15 +20,19 @@ namespace Uniqlo_1.Controllers
                 Subtitle = x.Subtitle,
                 Title = x.Title
             }).ToListAsync();
-            vm.Products = await _context.Products.Where(x => !x.IsDeleted).Select(x => new ProductListItemVM
+            vm.Brands=await _context.Brands.OrderByDescending(x=>x.Products!.Count).Take(4).ToListAsync();
+            vm.PopularProducts = await _context.Products
+                .Where(x => vm.Brands.Select(y => y.Id).Contains(x.BrandId!.Value))
+                .Take(10).Select(x => new ProductListItemVM
             {
-                CoverImage = x.CoverImage,
-                Discount = x.Discount,
-                Id = x.Id,
-                IsInStock = x.Quantity>0,
-                Name = x.Name,
-                SellPrice = x.SellPrice
-            }).ToListAsync();
+                    CoverImage = x.CoverImage,
+                    Discount = x.Discount,
+                    Id = x.Id,
+                    IsInStock = x.Quantity > 0,
+                    Name = x.Name,
+                    SellPrice = x.SellPrice,
+                    BrandId = x.BrandId!.Value
+                }).ToListAsync();
             return View(vm);
         }
         public IActionResult About()

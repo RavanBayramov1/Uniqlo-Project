@@ -423,17 +423,19 @@ $('.image-popup').magnificPopup({
 /*-------------------------------
   19. Price Slider Active
 --------------------------------*/
-  $("#slider-range").slider({
-      range: true,
-      min: 10,
-      max: 500,
-      values: [110, 400],
-      slide: function(event, ui) {
-          $("#amount").val("$" + ui.values[0] + " - $" + ui.values[1]);
-      }
-  });
-  $("#amount").val("$" + $("#slider-range").slider("values", 0) +
-      " - $" + $("#slider-range").slider("values", 1));
+    //console.log($("#slider-range").attr('min-val'));
+    //console.log($("#slider-range").attr('max-val'));
+    $("#slider-range").slider({
+        range: true,
+        min: 30000,
+        max: 1000000,
+        values: [$("#slider-range").attr('min-val') ?? 90000, $("#slider-range").attr('max-val') ?? 400000],
+        slide: function (event, ui) {
+            $("#amount").val(ui.values[0] + "-" + ui.values[1]);
+        }
+    });
+    $("#amount").val($("#slider-range").slider("values", 0) +
+        "-" + $("#slider-range").slider("values", 1));
 
 
 
