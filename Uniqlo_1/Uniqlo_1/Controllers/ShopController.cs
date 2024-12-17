@@ -66,7 +66,7 @@ namespace Uniqlo_1.Controllers
             }
             string data = JsonSerializer.Serialize(basket);
             HttpContext.Response.Cookies.Append("basket", data);
-            return Ok();
+            return RedirectToAction(nameof(Index),"Home");
         }
 
         //public async Task<IActionResult> Details(int? id)
@@ -93,19 +93,19 @@ namespace Uniqlo_1.Controllers
                 return new();
             }
         }
-        //public async Task<IActionResult> RemoveBasket(int id)
-        //{
-        //    var basket = getBasket();
-        //    var item = basket.FirstOrDefault(x => x.Id == id);
-        //    if (item != null) item.Count--;
-        //    else
-        //    {
-        //        basket.Remove(item);
-        //    }
+        public async Task<IActionResult> RemoveBasket(int id)
+        {
+            var basket = getBasket();
+            var item = basket.FirstOrDefault(x => x.Id == id);
+            if (item != null) item.Count--;
+            else if(item.Count == 0) 
+            {
+                basket.Remove(item);
+            }
 
-        //    string data = JsonSerializer.Serialize(basket);
-        //    HttpContext.Response.Cookies.Append("basket", data);
-        //    return Ok();
-        //}
+            string data = JsonSerializer.Serialize(basket);
+            HttpContext.Response.Cookies.Append("basket", data);
+            return RedirectToAction(nameof(Index), "Home");
+        }
     }
 }
